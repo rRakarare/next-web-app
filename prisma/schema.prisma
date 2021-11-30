@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  username String
+  password String
+
+  @@map(name:"users")
+}
+
+model Project {
+  id Int @id @default(autoincrement())
+  name String
+  createdAt DateTime @default(now())
+  analyzer PickedAnalzer[]
+}
+
+model PickedAnalzer {
+  id Int @id @default(autoincrement())
+  amount Int
+  analyzer Analyzer @relation(fields: [analyzerID], references: [id])
+  analyzerID Int
+  project Project @relation(fields: [projectID], references: [id])
+  projectID Int
+}
+
+model Analyzer {
+  id Int @id @default(autoincrement())
+  name String
+  width Float
+  depth Float
+  height Float
+  picks PickedAnalzer[]
+  brand Brand @relation(fields: [brandID], references: [id])
+  brandID Int
+}
+
+model Brand {
+  id Int @id @default(autoincrement())
+  name String
+  logo String
+  analyzer Analyzer[]
+}

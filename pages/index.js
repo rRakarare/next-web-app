@@ -1,8 +1,21 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Navbar from '../components/Navbar'
+import Head from "next/head";
+import { useEffect } from "react";
+import axios from "axios";
 
 export default function Home() {
+  const getUsers = async () => {
+    try {
+      const res = await axios.get("api/getProjects");
+      console.log(res.data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   return (
     <div>
       <Head>
@@ -12,5 +25,5 @@ export default function Home() {
       </Head>
       <h2>Home</h2>
     </div>
-  )
+  );
 }
