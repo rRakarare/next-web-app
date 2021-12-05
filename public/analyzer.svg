@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="57.0966mm"
+   height="27.90745mm"
+   viewBox="0 0 57.096599 27.90745"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(-49.089999,-33.281864)">
+    <g
+       id="g848"
+       transform="translate(0.99999814,0.99999896)">
+      <text
+         xml:space="preserve"
+         style="font-size:10.5833px;line-height:1.25;font-family:'Lexend Exa';-inkscape-font-specification:'Lexend Exa';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="76.416046"
+         y="55.13406"
+         id="text835"><tspan
+           id="tspan833"
+           x="76.416046"
+           y="55.13406"
+           style="stroke-width:0.264583">NALYZER</tspan></text>
+      <path
+         style="fill:#1b2845;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 49.265651,46.933337 h 2.645833 l 5.743081,-9.418139 5.898586,9.418139 h 2.645833 L 57.654565,33.281864 Z"
+         id="path837" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.58611px;line-height:1.25;font-family:'Lexend Exa';-inkscape-font-specification:'Lexend Exa';text-align:center;letter-spacing:-0.566208px;text-anchor:middle;stroke-width:0.264583"
+         x="100.86598"
+         y="59.189316"
+         id="text841"><tspan
+           id="tspan839"
+           x="100.58288"
+           y="59.189316"
+           style="font-size:4.58611px;fill:#1b2845;fill-opacity:1;stroke-width:0.264583"
+           dx="-0.11">DB</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { signIn } from "next-auth/client";
 import { useRouter } from "next/router";
+import { Form, FormWrap, Input } from "./login-styles";
+import { Button } from "./../Basic/Button";
+import Image from "next/image";
 
-
-
-const login = () => {
+const Login = () => {
   const router = useRouter();
   const [username, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -34,27 +35,36 @@ const login = () => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      {loginError}
-      <label>
-        Email:{" "}
-        <input
+    <FormWrap>
+      <Form onSubmit={handleLogin}>
+        <Image src={"/analyzer_light.svg"} alt="logo" width={100} height={70} />
+        <h2 style={{ color: "white" }}>LOGIN</h2>
+        <Input
           type="text"
           value={username}
+          placeholder="username"
           onChange={(e) => setUser(e.target.value)}
         />
-      </label>
-      <label>
-        Password:{" "}
-        <input
+
+        <Input
           type="password"
           value={password}
+          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-      </label>
-      <button type="submit">Submit login</button>
-    </form>
+
+        <Button
+          width={"100%"}
+          style={{ marginTop: "1rem" }}
+          color="primary"
+          type="submit"
+        >
+          Login
+        </Button>
+        <p style={{ color: "white" }}>{loginError}</p>
+      </Form>
+    </FormWrap>
   );
 };
 
-export default login;
+export default Login;

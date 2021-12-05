@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
 
-export default function About() {
+export default function About(props) {
+  console.log(props);
   return (
     <div>
       <Head>

@@ -4,18 +4,18 @@ import axios from "axios";
 import { useSession } from "next-auth/client";
 
 export default function Home() {
-  const [session, loading] = useSession()
+  const [session, loading] = useSession();
   const getUsers = async () => {
     try {
       const res = await axios.get("api/getProjects");
-      console.log(res.data);
+      console.log("projekte", res.data);
     } catch (err) {
       console.log(err.message);
     }
   };
 
   useEffect(() => {
-    console.log("session",session)
+    getUsers();
   }, []);
 
   return (

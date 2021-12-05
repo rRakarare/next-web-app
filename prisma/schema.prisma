@@ -15,8 +15,13 @@ model User {
   username String
   password String
   isActive String @default("1") @db.Char(1)
+  role      Role     @default(USER)
 
-  @@map(name: "users")
+}
+
+enum Role {
+  USER
+  ADMIN
 }
 
 model Project {
