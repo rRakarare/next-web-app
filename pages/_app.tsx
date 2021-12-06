@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Auth from "../components/Auth";
+import Head from "next/head";
 import "../styles/globals.css";
 import { Provider } from "next-auth/client";
 
@@ -12,6 +13,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: ${props => props.theme.colors.dark};
 }
 
 a {
@@ -37,8 +39,15 @@ const theme = {
 function MyApp({ Component, pageProps }) {
   return (
     <Provider options={{ clientMaxAge: 0 }} session={pageProps.session}>
-      <GlobalStyle />
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </Head>
+      
       <ThemeProvider theme={theme}>
+      <GlobalStyle />
         <Auth>
           <Layout>
             <Component {...pageProps} />

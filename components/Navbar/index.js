@@ -5,12 +5,14 @@ import Image from "next/image";
 import { useSession } from "next-auth/client";
 import { signOut } from "next-auth/client";
 import { StyledDiv, StyledLink, Nav } from "./navbar-styles.js";
+import { Container } from "../Basic/Container/container-styles.js";
 
 function Navbar() {
   const [session, loading] = useSession();
   console.log(session.user.role);
   return (
     <Nav>
+
       <div>
         <Link href="/" passHref>
           <StyledLink>
@@ -35,6 +37,7 @@ function Navbar() {
           </Link>
         ) : null}
       </div>
+
     </Nav>
   );
 }

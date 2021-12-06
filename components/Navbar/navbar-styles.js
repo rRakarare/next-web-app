@@ -7,6 +7,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 8rem;
 `;
 
 export const StyledLink = styled.a`

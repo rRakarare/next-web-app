@@ -24,6 +24,8 @@ const configuration = {
           },
         });
 
+        console.log(userraw)
+
         const result = bcrypt.compareSync(
           credentials.password,
           userraw.password
