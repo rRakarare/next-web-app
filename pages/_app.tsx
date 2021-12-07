@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: ${props => props.theme.colors.dark};
+    background: ${props => props.theme.colors.white};
 }
 
 a {
@@ -28,6 +28,7 @@ a {
 
 const theme = {
   colors: {
+    white: "#fff",
     primary: "#1b2845ff",
     light: "#dcd8e4",
     dark: "#19181d",
