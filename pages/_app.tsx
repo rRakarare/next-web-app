@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: ${props => props.theme.colors.white};
+    background: ${(props) => props.theme.colors.white};
 }
 
 a {
@@ -35,6 +35,13 @@ const theme = {
     danger: "#a71a1a",
     success: "#116e2d",
   },
+  breakpoints: {
+    xs: 0,
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+  },
 };
 
 function MyApp({ Component, pageProps }) {
@@ -46,11 +53,11 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
       </Head>
-      
+
       <ThemeProvider theme={theme}>
-      <GlobalStyle />
+        <GlobalStyle />
         <Auth>
-          <Layout>
+          <Layout {...pageProps}>
             <Component {...pageProps} />
           </Layout>
         </Auth>

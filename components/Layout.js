@@ -1,14 +1,13 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import {Container} from "./Basic/Container/container-styles.js"
+import Sidebar from "./Sidebar";
+import { Container } from "./Basic/Container/container-styles.js";
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageProps }) {
   return (
     <div>
-      <Navbar />
-      <Container>
-      {children}
-      </Container>
+      <Sidebar {...pageProps} />
+      <Container>{children}</Container>
     </div>
   );
 }
